@@ -1,0 +1,68 @@
+package easy;
+
+import java.util.Scanner;
+
+public class Sum_queries {
+
+	public Sum_queries() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		
+		
+		
+		Scanner sc =new Scanner(System.in);
+		int n=0;
+		int m=0,k=0;
+		n=sc.nextInt();
+		m=sc.nextInt();
+		n++;
+		while(m>0) {
+		k=sc.nextInt();
+		int y=0;
+		y=k-n;
+		if(y>n-1) {
+			
+			if(k>((2*(n-1))+1)) {
+				System.out.println(k+" "+((2*(n-1))+1));
+				
+				int u=k-(2*(n-1))+1;
+				int j=y-(2*u);
+		
+				if(j>0)
+				System.out.println(j);
+				else
+					System.out.println("0mk");
+			}
+			
+			
+		}
+		else {
+			if(y>0)
+			System.out.println(y);
+			else
+				System.out.println("0");
+		}
+			
+			m--;
+		}
+				
+				
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

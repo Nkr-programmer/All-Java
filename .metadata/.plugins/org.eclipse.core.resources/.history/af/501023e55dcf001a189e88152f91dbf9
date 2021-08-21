@@ -1,0 +1,42 @@
+package easy;
+
+import java.util.Scanner;
+
+public class Walk {
+
+	public Walk() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc =new Scanner(System.in);
+		int t=0;
+	
+		t=sc.nextInt();
+		while(t>0) {
+		long n=0,m=0,k=0,v=0;
+		n=sc.nextLong();
+		long nt=n;
+		while(n>0) {
+		m=sc.nextLong();
+	
+		if(k<m) {k=m;v=n;}
+		
+		n--;}
+			
+System.out.println(n);
+		System.out.println(k);
+		t--;
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

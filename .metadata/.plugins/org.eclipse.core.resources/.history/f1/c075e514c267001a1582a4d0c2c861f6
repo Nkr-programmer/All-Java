@@ -1,0 +1,121 @@
+package stack_array_3;
+
+import java.util.Stack;
+
+public class Q__array {
+	static Stack<Integer> p= new Stack<Integer>();
+
+	
+
+
+public static void nextgreater(int a[],int n){
+	int x=0;
+	for(int i=0;i<n;i++)
+	{x=0;
+		for(int j=i+1;j<n;j++)
+		{
+			if(a[i]<a[j])
+			{x=1;
+				System.out.println(a[j]);
+                 break;
+			}
+			
+		}	
+		if(x==0) {
+			System.out.println("-1");
+		}
+		
+	}
+}
+
+
+public static void nextelement(int a[],int n) {
+	
+	Stack<Integer> s= new Stack<Integer>();
+	int element,next;
+	s.push(a[0]);
+	
+	
+	
+	for(int i=1;i<n;i++)
+	{
+		
+		next=a[i];
+		
+		if(s.isEmpty()!=true)
+		{
+			element=s.pop();
+		while(element<next) {
+			System.out.println(element+"-->"+next);
+			if(s.isEmpty()==true)
+			{
+				break;
+			}
+			element=s.pop();
+		}
+		
+		
+		if(element>next)
+		{
+			s.push(element);
+		}
+		}
+		s.push(next);
+		
+	}
+	
+	while(s.isEmpty()!=true)
+	{
+		element=s.pop();
+		next=-1;
+		System.out.println(element+"-->"+next);
+		
+	}
+	
+	
+}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int a[]= {16,2,5,15};
+
+
+//		nextgreater(a,4);
+//		nextelement(a,4);
+
+stockspan(a,4);
+
+  
+
+
+
+	}
+
+
+	private static void stockspan(int[] a, int n) {
+
+		
+		int x=0;
+		for(int i=0;i<n;i++)
+		{x=0;
+			for(int j=i+1;j<n;j++)
+			{
+				if(a[i]<a[j])
+				{x=1;
+					System.out.println(a[j]);
+	                 break;
+				}
+				
+			}	
+			if(x==0) {
+				System.out.println("-1");
+			}
+			
+		}
+		
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,53 @@
+package stringd;
+
+import java.util.Scanner;
+
+public class Medium {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner sc=new Scanner(System.in);
+String y= sc.nextLine();
+int t=myAtoi(y);
+System.out.println(t);
+	}
+
+	   public static int myAtoi(String str) {
+		   str= str.trim();
+		     if(str.length()==0) {return 0;}
+		        int y=0;boolean x= false;
+		        int sign=1;
+		        
+		        if(str.charAt(0)=='-'||str.charAt(0)=='+') {x=true;
+		        if(str.charAt(0)=='-') {sign=-1;}
+		        }
+		        if((str.charAt(0)>='0'&&str.charAt(0)<='9')	) {
+		        	int i=0;
+		        	if(x) { i=1;}
+		        	
+		        	
+		        	 for(;i<str.length();i++) {
+		        			
+				        	if((str.charAt(i)>='0'&&str.charAt(i)<='9'))
+				        	{
+				        		if(y>(Integer.MAX_VALUE-(int)str.charAt(i)-'0')/10)
+				        		{if(sign==1)return Integer.MAX_VALUE;else{return Integer.MIN_VALUE;}}
+				        		y=y*10+(int)(str.charAt(i)-'0');
+				        	}
+				        	else {break;}
+				        	
+				        }
+		        	
+		        	
+		        	
+		        }else {return 0;}
+		       
+		        
+		        
+		 if(sign==-1) {y=y*-1;}
+		    
+		        return y;
+		    }
+		
+	}
+

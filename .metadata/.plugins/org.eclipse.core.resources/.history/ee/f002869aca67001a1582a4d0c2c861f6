@@ -1,0 +1,98 @@
+package stack_array_3;
+
+import java.util.Stack;
+
+public class Q__array {
+	static Stack<Integer> p= new Stack<Integer>();
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int a[]= {16,2,5,15,8,1};
+int s[]= new int[6] ;
+
+//		nextgreater(a,4);
+//		nextelement(a,4);
+
+//stockspan(a,6);
+stockspanrecurtion(a,6,s);
+
+  
+
+for(int i=0;i<6;i++)
+{
+System.out.println(s[i]);	
+}
+
+
+
+
+
+
+int y=0,x=0;
+p.push(-3);
+p.push(-8);
+p.push(-2);
+p.push(10);
+p.push(0);
+p.push(4);
+p.push(5);
+p.push(1);
+p.push(9);
+p.push(3);
+p.push(8);
+p.push(2);
+p.push(10);
+
+minimumds(x);
+
+	while(p.isEmpty()==false)
+	{
+		System.out.println(p.pop());
+
+	}
+	}
+	private static void minimumds(int x) 
+	{
+		if(p.isEmpty()==false)
+		{
+			x=p.pop();
+			minimumds(x);
+		}
+		p.push(x);
+
+		
+		
+	}
+	private static void stockspanrecurtion(int[] a, int n,int[] h) {
+	
+		int x=0,t=0;
+		while(x<n)
+		{
+			if(a[x]<=a[n-1])
+			{
+				t++;
+			}
+			h[n-1]=t;
+			x++;	
+		}
+		if(n>0)
+		{
+			stockspanrecurtion(a,n-1,h);	
+		}	
+	}
+	private static void stockspan(int[] a, int n) {
+		int x=0;
+		for(int i=0;i<n;i++)
+		{x=0;
+			for(int j=0;j<=i;j++)
+			{
+				if(a[i]>=a[j])
+				{
+					x+=1;
+				}
+			}	
+				System.out.println(x);	
+		}	
+	}
+}

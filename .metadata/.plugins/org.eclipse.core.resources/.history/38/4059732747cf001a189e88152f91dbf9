@@ -1,0 +1,14 @@
+package easy;
+
+public class Sum_queries {
+
+	public Sum_queries() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

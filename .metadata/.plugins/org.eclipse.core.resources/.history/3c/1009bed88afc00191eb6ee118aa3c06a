@@ -1,0 +1,10 @@
+package gfgbasic;
+
+public class Maximum_triplet_sum_in_array {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

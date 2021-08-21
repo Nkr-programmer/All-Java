@@ -1,0 +1,10 @@
+package gfgbasic;
+
+public class Minimum_Product_of_k_Integers {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

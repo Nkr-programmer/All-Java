@@ -1,0 +1,10 @@
+package gfgbasic;
+
+public class SPrint_k_smallest_elements_in_their_original_order {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

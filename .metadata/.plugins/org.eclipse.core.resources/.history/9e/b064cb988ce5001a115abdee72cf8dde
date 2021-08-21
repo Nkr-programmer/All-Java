@@ -1,0 +1,195 @@
+package stringd;
+
+import java.net.Inet6Address;
+import java.net.InetAddress;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
+//abc deq mee aqq dkd ccc
+public class Medium {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner sc=new Scanner(System.in);
+
+String y= sc.nextLine();
+int t=minFlips(y);
+System.out.println(t);
+	}
+
+	   public static int myAtoi(String str) {
+	        str= str.trim();
+			     if(str.length()==0) {return 0;}
+			        int y=0;boolean x= false;
+			        int sign=1;
+			        int i=0;
+			        if(str.charAt(i)=='-'||str.charAt(i)=='+') {x=true;i++;
+	                                                            if(str.length()==1){return 0;}
+			        if(str.charAt(0)=='-') {sign=-1;}
+			        }
+			        if((str.charAt(i)>='0'&&str.charAt(i)<='9')	) {
+			        	
+			        	if(x) { i=1;}
+			        	
+			        	
+			        	 for(;i<str.length();i++) {
+			        			
+					        	if((str.charAt(i)>='0'&&str.charAt(i)<='9'))
+					        	{
+					        		if(y>(Integer.MAX_VALUE-((int)str.charAt(i)-'0'))/10)
+					        		{if(sign==1)return Integer.MAX_VALUE;else{return Integer.MIN_VALUE;}}
+					        		y=y*10+(int)(str.charAt(i)-'0');
+					        	}
+					        	else {break;}
+					        	
+					        }
+			        	
+			        	
+			        	
+			        }else {return 0;}
+			       
+			        
+			        
+			 if(sign==-1) {y=y*-1;}
+			    
+			        return y;
+			    }
+	   //2
+	    public static  String validIPAddress(String ip) {
+	    	  if(ip.length()==0)return"Neither";
+		        if(ip.length()<7)return "Neither";
+		        if(ip.length()>39)return "Neither";
+		        if(ip.charAt(0)==':'||ip.charAt(ip.length()-1)==':'||ip.charAt(0)=='.'||ip.charAt(ip.length()-1)=='.') {return "Neither";}
+		        if(ip.length()==15) {
+		        	
+		        	if(ip.charAt(1)==':'&&ip.charAt(3)==':') {
+		      String g=isIpv6(ip);
+		        		if(g.equals("IPv6")) {return g;}
+		        	
+		        	}
+		        	if(ip.charAt(3)=='.'&&ip.charAt(7)=='.') {
+		        		String gi=isIpv4(ip);
+		        		if(gi.equals("IPv4")) {return gi;}
+		        		else {
+		        			return gi;
+		        			
+		        		}
+		        	}
+		        	
+		        }else {
+		        	if(ip.length()<15) {
+		        	String h=isIpv4(ip);
+		        	return h;
+		        	}
+		        	else {
+		       String hi=isIpv6(ip);
+		       return hi;
+		        	}
+		        }
+		        
+		     return "Neither";   
+		    }
+
+			private static String isIpv6(String ip) {
+				// TODO Auto-generated method stub
+				
+	    		String []b= ip.split(":");
+	    		if(b.length!=8) {return "Neither";}
+	    		for(int i=0;i<8;i++) {
+	    			if(b[i].length()==0) {return "Neither";}
+	    			if(b[i].length()>4) {return "Neither";}
+	    			for(int j=0;j<b[i].length();j++) {
+	    			if((b[i].charAt(j)>='a'&&b[i].charAt(j)<='f')||
+	    					(b[i].charAt(j)>='A'&&b[i].charAt(j)<='F')||
+	    					(b[i].charAt(j)>='0'&&b[i].charAt(j)<='9')) {
+	    				
+	    			}else {return "Neither";}
+	    			}
+	    				  
+			} return "IPv6";
+			}
+			private static String isIpv4(String ip) {
+				// TODO Auto-generated method stub
+			
+	        		String []a=ip.split("\\.");
+	        		
+	        		
+	        		
+	        	
+	        		if(a.length!=4) {return "Neither";}
+	        		int y=0;
+	        		for(int i=0;i<4;i++) {
+	        			if(a[i].length()==0) {return "Neither";}
+	        			if(a[i].length()>3) {return "Neither";}
+	        			if(a[i].charAt(0)=='0') {if(a[i].length()>1)return "Neither";}
+	        			 y=0;
+	        			for(int j=0;j<a[i].length();j++) {
+	                        if(a[i].charAt(j)>='0'&&a[i].charAt(j)<='9')
+	        			y=y*10+(int)a[i].charAt(j)-'0';
+	                        else return "Neither"; 
+	        			}
+	        				System.out.println(y);
+	        		if(y>255) {return "Neither";}
+	        	
+	        		}
+	        		return "IPv4";
+			}
+			
+			  public String validIPAddress2(String IP) {
+				    try {
+				      return (InetAddress.getByName(IP) instanceof Inet6Address) ? "IPv6": "IPv4";
+				    } catch(Exception e) {}
+				    return "Neither";
+				  }
+
+//NOT FOR 01.01.01.01
+			  //3
+			  public int minSteps(String s, String t) {
+			     
+			  	 HashMap<Character,Integer>a= new HashMap<Character,Integer>(); 
+			     for(int i=0;i<s.length();i++) {
+			     	if(a.containsKey(s.charAt(i))) {
+			     		a.put(s.charAt(i), a.get(s.charAt(i))+1);
+			     	}
+			     	else {
+			     		
+			     		a.put(s.charAt(i), 1);
+			     	}
+			     }
+			        int z=0;
+			     for(int i=0;i<t.length();i++) {
+			    	 if(!a.containsKey(t.charAt(i))) {z++;}
+			    	 else {
+			    	
+			    		 if(a.get(t.charAt(i))<=0) {z++;}
+			    		 
+			    		 a.put(t.charAt(i),a.get(t.charAt(i))-1);
+			    		 
+			    	 }
+			     }
+			     
+			     return z;
+			    }
+			  
+			   public static int minFlips(String target) {
+			     
+String h;int turns=0;
+
+for(int i=0;i<target.length();i++) {
+	if(turns%2==(int)(target.charAt(i))-'0') {continue;}
+	else {turns++;}
+
+	
+}	System.out.println(turns);
+return turns;
+				   
+				   
+			    }
+
+	
+			    
+
+			  
+}
+

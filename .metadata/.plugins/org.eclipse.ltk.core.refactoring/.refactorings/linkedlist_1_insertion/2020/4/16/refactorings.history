@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;Bt_by_2_transversal.java&apos; to &apos;linkedlist_1_insertion/src/binary_tree_3&apos;&#x0D;&#x0A;- Original project: &apos;linkedlist_1_insertion&apos;&#x0D;&#x0A;- Destination element: &apos;linkedlist_1_insertion/src/binary_tree_3&apos;&#x0D;&#x0A;- Original element: &apos;binary_tree.Bt_by_2_transversal.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;binary_tree_3" element1="/src&lt;binary_tree{Bt_by_2_transversal.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1586930363161" units="1" version="1.0"/>
+</session>

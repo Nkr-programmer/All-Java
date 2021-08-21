@@ -1,0 +1,60 @@
+package linkedListd;
+
+import linkedListd.MyLinkedList;
+import linkedListd.MyLinkedList.ListNode;
+
+public class Medium {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 MyLinkedList list = new MyLinkedList();
+		  int param_1 = list.get(0);
+		  list.printed();
+		 list.addAtHead(1);
+		 list.printed();
+		  list.addAtTail(2);
+		  list.printed();
+		  list.addAtIndex(0,3);
+list.printed();
+list.addAtIndex(1,4);
+list.printed();
+		  list.deleteAtIndex(0);
+		 list.printed();
+		
+		list.addAtHead(6);
+		list.printed();
+		list.addAtHead(7);
+		list.printed();
+		
+		
+		list.delete(1);
+		list.printed();
+		list.delete(2);	
+		list.printed();
+		list.delete(7);	
+		list.printed();
+		list.delete(6);	
+		list.printed();
+		list.delete(4);	
+		list.printed();
+
+		list.addAtHead(0);
+		list.addAtIndex(1,1);
+		list.addAtIndex(1,1);
+		list.addAtIndex(1,1);
+		list.addAtIndex(1,0);
+		list.addAtIndex(1,1);
+		list.addAtIndex(1,1);
+		list.addAtIndex(1,0);
+		list.addAtIndex(1,1);
+		list.addAtIndex(1,1);
+		list.addAtIndex(1,0);
+		list.addAtIndex(1,1);
+		list.addAtIndex(1,0);
+		list.addAtIndex(1,1);
+
+		list.printed();
+	System.out.println(list.size);
+	}
+
+}

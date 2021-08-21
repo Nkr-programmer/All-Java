@@ -1,0 +1,77 @@
+   package binary_tree;
+
+  
+		
+public class Bt_by_2_transversal {
+	 class Node{
+			char data;
+			Node left ,right;
+			public Node(char item) {
+				this.data=item;
+				left=right=null;
+			}}
+	Node root;
+	Bt_by_2_transversal(){
+		root =null;
+		
+	}
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		
+		Bt_by_2_transversal x= new Bt_by_2_transversal();
+		x.root =new Node('A'); 
+		x.root.left =new Node('B'); 
+		x.root.right =new Node('C');
+		x.root.left.left =new Node('D');
+		x.root.left.right =new Node('E'); 
+		x.root.right.left =new Node('F');
+
+	//	x.root=treemaking();
+
+	x.inorder();
+	System.out.println();
+	x.preorder();
+	System.out.println();
+
+	
+		
+	}
+
+
+	void preorder() {
+		// TODO Auto-generated method stub
+		preorder(root);
+	}
+	private void preorder(Node root2) {
+		// TODO Auto-generated method stub
+		if(root2==null) {return ;}
+		System.out.print(root2.data);	
+		preorder(root2.left);
+		preorder( root2.right);
+
+	}
+
+
+
+
+	void inorder() {
+		// TODO Auto-generated method stub
+		inorder(root);
+	}
+
+
+
+
+	private void inorder(Node root2) {
+		// TODO Auto-generated method stub
+		if(root2==null) {return ;}
+		inorder(root2.left);
+		System.out.print(root2.data);	
+		inorder( root2.right);
+	}
+}
+   

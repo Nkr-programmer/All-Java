@@ -1,0 +1,13 @@
+package stackandqueued;
+
+import java.util.Stack;
+
+public class Medium {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+

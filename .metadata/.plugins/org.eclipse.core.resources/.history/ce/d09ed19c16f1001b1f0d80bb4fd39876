@@ -1,0 +1,314 @@
+package Sequence;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.PriorityQueue;
+import java.util.Queue;
+
+public class rows {
+
+	public static  void main(String[] args) {
+		// TODO Auto-generated method stub
+int a[]= 
+{ -1, 2, -3, 4, 5, 6, -7, 8, 9 };
+move(a);
+
+	}
+	//1) array  344. Reverse String
+		 public static  void reverseString(char[] word) {
+			    
+		        int i = 0;
+		        int j = word.length - 1;
+		        while (i < j) {
+		            word[i] = (char) (word[i] ^ word[j]);
+		            word[j] = (char) (word[i] ^ word[j]);
+		            word[i] = (char) (word[i] ^ word[j]);
+		            i++;
+		            j--;
+		        }
+		    }
+		 //2) array find max and min in ana array
+		 public static  void find(int[] arr)
+		 {
+			 int l=arr.length;
+			 int max=-99999,min=99999;
+			 int i=0,j= l-1;
+			 while(i<j)
+			 {
+				 max=Integer.max(max, arr[i]);max=Integer.max(max, arr[j]);
+				 min=Integer.min(min, arr[i]);min=Integer.min(min, arr[j]);
+				 i++;j--;
+			 }
+			 System.out.println(max+" "+min);
+			 		 }
+		 // 3) find kth largest element in arraay
+			public static class Comp implements Comparator<Integer>{
+	             
+				 public int compare(Integer first, Integer second) {
+					//find kth smallest element in arraay
+				//	 return first < second ? 1 : -1;
+			            return first > second ? 1 : -1;
+			        }
+		        }
+			
+		public int findKthLargest(int[] arr, int k) 
+			 {
+	   PriorityQueue<Integer>x= new PriorityQueue<Integer>(k,new Comp());
+		 int l=arr.length;if(l==1)return arr[0];
+		 int i=0,j= l-1;
+		 while(i<j)
+		 {
+			 if(x.size()>k) x.poll();
+			 x.add(arr[i]);
+			 if(x.size()>k)  {x.poll();}
+			 x.add(arr[j]);
+			
+			 if(i+1==j-1) { if(x.size()>k)  x.poll();
+			 x.add(arr[i+1]); if(x.size()>k)  {x.poll();}}
+			 else if(i+1==j) { if(x.size()>k)  {x.poll();}}
+			 i++;j--;
+		 }
+		 return x.poll();
+	   
+			 }
+		 
+		//4
+		 public static void sort012(int nums[], int n)
+	     { int l=nums.length;
+	        int i=0,j=0,k=0;
+	        for(int t=0;t<l;t++){
+	            if(nums[t]==0)i++;
+	            else if(nums[t]==1)j++;
+	            else k++;
+	        }
+	        int t=0;
+	        while(i!=0){nums[t]=0;i--;t++;}
+	        while(j!=0){nums[t]=1;j--;t++;}
+	        while(k!=0){nums[t]=2;k--;t++;}
+	   
+	    }
+	
+		//5
+		//move -ve to left and +ve to right
+		public static void move(int[] arr) {
+			int i=0,j=arr.length-1;
+			
+			while(i<=j) {
+				if(arr[i]<0&&arr[j]<0) {i++;}
+				else if(arr[i]>0&&arr[j]<0) {int k=arr[i];arr[i]=arr[j];
+				arr[j]=k;
+				i++;j--;}
+				else if(arr[i]>0&&arr[j]>0) {j--;}
+				else{i++;j--;}
+			}
+			for(int x:arr) {System.out.print(x+" ");}
+				
+		} 
+		
+		
+		//Move 0s
+		public void moveZeroes(int[] arr) {
+		      int i=0;
+		        for(int x:arr){if(x!=0)arr[i++]=x;}
+		        for(int t=i;t<arr.length;t++){arr[t]=0;}
+		
+		}
+		//6
+		//Intersection
+		  public int[] intersection(int[] nums1, int[] nums2) {
+				 HashMap<Integer,Integer>x= new HashMap<Integer,Integer>();
+				        ArrayList<Integer> c= new  ArrayList<Integer>();int j=0;
+				        for(int i:nums1)
+				        {if(!x.containsKey(i)){x.put(i,1);}}
+				        for(int i:nums2){if(x.containsKey(i)){c.add(i);x.remove(i);}}
+				        int cc[]= new int[c.size()];int g=0;
+				        for(Integer v:c) {cc[g++]=v;}
+				     return cc;
+				    }
+		  //Union
+		    public static int doUnion(int nums1[], int n, int nums2[], int m) 
+		    {
+		        
+		 HashSet<Integer>x= new HashSet<Integer>();
+		        for(int i=0;i<nums1.length;i++)
+		        {x.add(nums1[i]);}
+		  for(int i=0;i<nums2.length;i++)
+		        {x.add(nums2[i]);}
+		    
+		        int []c= new int[x.size()];int i=0;
+		        for(Integer a:x){c[i++]=a;}
+		        
+		        return c.length;
+		    }
+		//7
+		//Rotate array
+		
+		  public void rotate(int[] nums, int k) {
+		        
+			  int l=nums.length,count=0;if(l==1||k==0||k==l)return;
+			         int tempindex=0,buf=nums[0];
+			         int init=0;
+			         while(count!=l)
+			         {
+			            int  b= nums[(tempindex+k)%l];
+			             nums[(tempindex+k)%l]=buf;
+			             buf=b;
+			             tempindex=(tempindex+k)%l;
+			             count++;
+			             if(init==tempindex){init++;tempindex++;buf=nums[tempindex];}
+			         }
+			         
+			         
+			     }
+//reversing the array algo
+		  public void rotate2(int[] nums, int k) {
+			    k %= nums.length;
+			    reverse(nums, 0, nums.length - 1);
+			    reverse(nums, 0, k - 1);
+			    reverse(nums, k, nums.length - 1);
+			  }
+			  public void reverse(int[] nums, int start, int end) {
+			    while (start < end) {
+			      int temp = nums[start];
+			      nums[start] = nums[end];
+			      nums[end] = temp;
+			      start++;
+			      end--;
+			    }
+			  }
+//8 Find the contiguous sub-array with maximum sum. //13 kadene algorithm
+			  int maxSubarraySum(int arr[], int n){
+			        int full[]= new int[arr.length];full[0]=arr[0];
+			        int max=full[0];
+			        for(int i=1;i<full.length;i++)
+			        {
+			         full[i]=arr[i]+(full[i-1]>0?full[i-1]:0);
+			         max=Math.max(max,full[i]);   
+			        }
+			        return max;
+			    }
+			  //9 Minimize the height 1
+			    int getMinDiff(int[] A, int n, int K) {
+			        int N = A.length;
+			            Arrays.sort(A);
+			            int ans = A[N-1] - A[0];
+
+			            for (int i = 0; i < A.length - 1; ++i) {
+			                int a = A[i], b = A[i+1];
+			                int high = Math.max(A[N-1] - K, a + K);
+			                int low = Math.min(A[0] + K, b - K);
+			                ans = Math.min(ans, high - low);
+			            }
+			            return ans;
+			        }
+			    //Minimize the height 2
+			    // imp
+			    int getMinDiff2(int[] A, int n, int K) {
+			    	 int N = A.length;
+			    	        Arrays.sort(A);
+			    	        int ans = A[N-1] - A[0];
+
+			    	        for (int i = 1; i < A.length; ++i)   {
+			    	        if(A[i]>=K){    int high = Math.max(A[i-1] + K, A[N-1] - K);
+			    	            int low = Math.min(A[i] - K, A[0] + K);
+			    	            ans = Math.min(ans, high - low);
+			    	        }else{continue;}}
+			    	           
+			    	        
+			    	        return ans;
+			    	    }
+			    	
+//10 min jumps needed to reach end
+			   public int jump(int[] nums) {
+		           int n= nums.length;if(n==1)return 0;
+		        int count=1;if(nums[0]==0)return -1;
+		        
+		        int hi=nums[0],i=1;
+		        while(hi<n-1)
+		        {int max=0;
+		         while(i<=hi)
+		         {
+		             if(max==n-1){return count+1;}
+		             max=Math.max(max,nums[i]+i);i++;
+		         }
+		         if(hi<max){hi=max;count++;}
+		         else{return -1;}
+		        }
+		            return count;
+		    }
+			   //11   Find the Duplicate Number
+			   public int findDuplicate(int[] nums) {
+			       
+			        int i=nums[0],kn=nums[i];
+			        while(kn!=0)
+			        { nums[i]=0;
+			             i=kn;
+			        kn=nums[i];
+			        }
+			         return i;
+			    }
+			//12 merge two sorted array
+			   // gap method
+
+			    public void merge(int arr1[], int arr2[], int n, int m){
+			    int t=(m+n)%2==1?(m+n+1):(m+n);
+			    while(t!=1)
+			    {
+			  t/=2;
+			        for(int i=0;i<m+n;i++)
+			        {
+			            if(i<n){
+			                int a=arr1[i];
+			                if((i+t)>=m+n){break;}
+			                int b=(i+t)<n?arr1[i+t]:arr2[(i+t-n)];
+			                if(a>b){
+			                    int x=arr1[i];
+			                    arr1[i]=(i+t)<n?arr1[i+t]:arr2[(i+t-n)];
+			                
+			                    if((i+t)<n){ arr1[i+t]=x;}
+			                    else{arr2[(i+t-n)]=x;}
+			                }
+			            }
+			            else{
+			                int a=arr2[i-n];
+			                if((i+t)>=m+n){break;}
+			                int b=arr2[(i-n)+t];
+			                if(a>b){
+			                    int x=a;
+			                    arr2[i-n]=arr2[(i-n)+t];
+			                    arr2[(i-n)+t]=x;
+			                }
+			            }
+			        }
+			if(t%2==1&&t!=1)t++;
+			    }
+			        
+			        
+			        
+			    }
+			    // Insertion sort
+			    public void merge2(int X[], int Y[], int m, int n) {
+			          for (int i = 0; i < m; i++)
+			        {
+			            if (X[i] > Y[0])
+			            {
+			                int temp = X[i];
+			                X[i] = Y[0];
+			                Y[0] = temp;
+			 
+			                int first = Y[0];
+			                int k;
+			                for (k = 1; k < n && Y[k] < first; k++) {
+			                    Y[k - 1] = Y[k];
+			                }
+			                Y[k - 1] = first;
+			            }
+			        }
+			    }
+			    
+			}
+			

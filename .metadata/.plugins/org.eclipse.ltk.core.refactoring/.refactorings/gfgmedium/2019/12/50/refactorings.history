@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;gfgmedium.Time_limit_merging&apos; to &apos;Merge_K_sorted_array&apos;&#x0D;&#x0A;- Original project: &apos;gfgmedium&apos;&#x0D;&#x0A;- Original element: &apos;gfgmedium.Time_limit_merging&apos;&#x0D;&#x0A;- Renamed element: &apos;gfgmedium.Merge_K_sorted_array&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Time_limit_merging&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;gfgmedium{Time_limit_merging.java[Time_limit_merging" matchStrategy="1" name="Merge_K_sorted_array" qualified="false" references="true" similarDeclarations="false" stamp="1576425478059" textual="false" version="1.0"/>
+</session>

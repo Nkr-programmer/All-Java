@@ -1,0 +1,44 @@
+package stringd;
+
+import java.util.Scanner;
+
+public class Medium {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner sc=new Scanner(System.in);
+String y= sc.nextLine();
+int t=myAtoi(y);
+System.out.println(t);
+	}
+
+	   public static int myAtoi(String str) {
+		   str= str.trim();
+		     if(str.length()==0) {return 0;}
+		        StringBuilder a= new StringBuilder();
+		        a.append(str);
+		        int y=0;
+		        for(int i=0;i<str.length();i++) {
+		   
+		
+		            if	(str.charAt(i)=='+'||str.charAt(i)=='-'){
+				       
+				        }
+		        	else
+		        	
+		        	if((str.charAt(i)>='0'&&str.charAt(i)<='9'))
+		        	{
+		        		y=y*10+(int)(str.charAt(i)-'0');
+		        	}
+		        	else {break;}
+		        	
+		        }
+		        if	(str.charAt(0)=='+'||str.charAt(0)=='-'){
+			        if(str.charAt(0)=='-') {y=y*-1;}
+			        }
+		        if(y<=-1089159116)return -2147483648;
+		        return y;
+		    }
+		
+	}
+

@@ -1,0 +1,43 @@
+package linked_list;
+
+public class Linked_list_starting {
+
+		
+		    Node head; // head of list 
+		  
+		    /* Linked list Node.  This inner class is made static so that 
+		       main() can access it */
+		    static class Node { 
+		        int data; 
+		        Node next; 
+		        Node(int d) 
+		        { 
+		            data = d; 
+		            next = null; 
+		        } 
+		    } 
+		  
+		   
+		    public static void main(String[] args) 
+		    { 
+		    	Linked_list_starting llist = new Linked_list_starting(); 
+		  
+		        llist.head = new Node(1); 
+		        System.out.print(llist.head);
+		        Node second = new Node(2); 
+		        System.out.print(second);
+		        Node third = new Node(3); 
+		        System.out.print(llist.head);
+		  
+		  
+		  
+		        llist.head.next = second; 
+		        second.next = third;
+		    } 
+
+		
+		
+		
+	
+
+}

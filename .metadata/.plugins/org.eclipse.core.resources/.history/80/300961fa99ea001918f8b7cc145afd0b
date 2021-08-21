@@ -1,0 +1,10 @@
+package gfgbasic;
+
+public class Minimize_the_sum_of_producct {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

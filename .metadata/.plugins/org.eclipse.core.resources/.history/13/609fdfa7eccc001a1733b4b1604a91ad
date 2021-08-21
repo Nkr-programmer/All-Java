@@ -1,0 +1,14 @@
+package easy;
+
+public class The_best_box {
+
+	public The_best_box() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
