@@ -1,6 +1,6 @@
-package binary_search;
+package table;
 
-public class t92to128 {
+public class jjj {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

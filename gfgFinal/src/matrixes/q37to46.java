@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Stack;
 
-public class q37to47 {
+public class q37to46 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

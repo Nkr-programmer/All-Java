@@ -3,7 +3,7 @@ package Arrays;
 import java.math.BigInteger;
 import java.util.*;
 
-public class rows {
+public class t1to36 {
 
 	public static  void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -247,7 +247,7 @@ move(a);
 			    }
 			//12 merge two sorted array
 			   // gap method
-
+//O(M+N)
 			    public void merge(int arr1[], int arr2[], int n, int m){
 			    int t=(m+n)%2==1?(m+n+1):(m+n);
 			    while(t!=1)
@@ -279,12 +279,10 @@ move(a);
 			            }
 			        }
 			if(t%2==1&&t!=1)t++;
-			    }
-			        
-			        
-			        
+			    } 
 			    }
 			    // Insertion sort
+			    //TLE O(M*N)
 			    public void merge2(int X[], int Y[], int m, int n) {
 			          for (int i = 0; i < m; i++)
 			        {

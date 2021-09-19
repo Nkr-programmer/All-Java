@@ -18,7 +18,7 @@ import java.util.Set;
 import java.util.Stack;
 import java.util.StringTokenizer;
 
-public class q48to91 {
+public class q47to88 {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 //	       String str = "AACECAAAA";
