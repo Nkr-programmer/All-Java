@@ -69,6 +69,7 @@ public class t89to124 {
     }
         return -1;       
     }
+
 //2
     //Value equal to index value
     //O(logn)

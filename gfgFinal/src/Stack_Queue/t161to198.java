@@ -2,6 +2,8 @@ package Stack_Queue;
 
 import java.util.*;
 
+import Stack_Queue.t161to198.GFG.myStack;
+
 public class t161to198 {
 	  static class Node
 	    {
@@ -57,58 +59,121 @@ public class t161to198 {
 //	        System.out.println("Rear item is "
 //	                           + queue.rear());
 		//5
-		  int k = 3, n = 10;
-          
-	        kstack ks = new kstack(n, k);
-	  
-	        ks.push(15, 2);
-	        ks.push(45, 2);
-	  
-	        // Let us put some items in stack number 1
-	        ks.push(17, 1);
-	        ks.push(49, 1);
-	        ks.push(39, 1);
-	  
-	        // Let us put some items in stack number 0
-	        ks.push(11, 0);
-	        ks.push(9, 0);
-	        ks.push(7, 0);
-	  
-	        System.out.println("Popped element from stack 2 is " + ks.pop(2));
-	        System.out.println("Popped element from stack 1 is " + ks.pop(1));
-	        System.out.println("Popped element from stack 0 is " + ks.pop(0));
-	    
-	        
-	         k = 3; n = 10;
-            KQueues kss=  new KQueues(k, n);
-            
-             
-            // Let us put some items in queue number 2
-            kss.enqueue(15, 2);
-            kss.enqueue(45, 2);
-           
-            // Let us put some items in queue number 1
-            kss.enqueue(17, 1);
-            kss.enqueue(49, 1);
-            kss.enqueue(39, 1);
-           
-            // Let us put some items in queue number 0
-            kss.enqueue(11, 0);
-            kss.enqueue(9, 0);
-            kss.enqueue(7, 0);
-             
-            System.out.println("Dequeued element from queue 2 is " +
-                                    kss.dequeue(2));
-            System.out.println("Dequeued element from queue 1 is " +
-                                    kss.dequeue(1));
-            System.out.println("Dequeued element from queue 0 is " +
-                                    kss.dequeue(0) );
+//		  int k = 3, n = 10;
+//          
+//	        kstack ks = new kstack(n, k);
+//	  
+//	        ks.push(15, 2);
+//	        ks.push(45, 2);
+//	  
+//	        // Let us put some items in stack number 1
+//	        ks.push(17, 1);
+//	        ks.push(49, 1);
+//	        ks.push(39, 1);
+//	  
+//	        // Let us put some items in stack number 0
+//	        ks.push(11, 0);
+//	        ks.push(9, 0);
+//	        ks.push(7, 0);
+//	  
+//	        System.out.println("Popped element from stack 2 is " + ks.pop(2));
+//	        System.out.println("Popped element from stack 1 is " + ks.pop(1));
+//	        System.out.println("Popped element from stack 0 is " + ks.pop(0));
+//	    
+//	        
+//	         k = 3; n = 10;
+//            KQueues kss=  new KQueues(k, n);
+//            
+//             
+//            // Let us put some items in queue number 2
+//            kss.enqueue(15, 2);
+//            kss.enqueue(45, 2);
+//           
+//            // Let us put some items in queue number 1
+//            kss.enqueue(17, 1);
+//            kss.enqueue(49, 1);
+//            kss.enqueue(39, 1);
+//           
+//            // Let us put some items in queue number 0
+//            kss.enqueue(11, 0);
+//            kss.enqueue(9, 0);
+//            kss.enqueue(7, 0);
+//             
+//            System.out.println("Dequeued element from queue 2 is " +
+//                                    kss.dequeue(2));
+//            System.out.println("Dequeued element from queue 1 is " +
+//                                    kss.dequeue(1));
+//            System.out.println("Dequeued element from queue 0 is " +
+//                                    kss.dequeue(0) );
+            //4 middle element
+//            GFG ob = new GFG();
+//            myStack ms = ob.createMyStack();
+//            ob.push(ms, 11);
+//            ob.push(ms, 22);
+//            ob.push(ms, 33);
+//            ob.push(ms, 44);
+//            ob.push(ms, 55);
+//            ob.push(ms, 66);
+//            ob.push(ms, 77);
+//     
+//            System.out.println("Item popped is " + ob.pop(ms));
+//            System.out.println("Item popped is " + ob.pop(ms));
+//            System.out.println("Middle Element is "
+//                               + ob.findMiddle(ms));
+        //Infix to prefix
+	System.out.println(	infixToPreFix("x+y*z/w+u"));
+		
+            //21
+//            iStack stk = new iStack();
+//       	 
+//    	    // push 7 and 8 at top of stack
+//    	    stk.push(7);
+//    	    stk.push(8);
+//    	    System.out.print("Stack: ");
+//    	    stk.display();
+//    	 
+//    	    // For new line
+//    	    System.out.println();
+//    	     
+//    	    // pop an element
+//    	    stk.pop();
+//    	    System.out.print("Stack: ");
+//    	    stk.display();
+//    	 
+//    	    // For new line
+//    	    System.out.println();
+//    	 
+//    	    // Object of Queue
+//    	    iQueue que = new iQueue();
+//    	 
+//    	    // Insert 12 and 13 in queue
+//    	    que.enqueue(12);
+//    	    que.enqueue(13);
+//    	    System.out.print("Queue: ");
+//    	    que.display();
+//    	 
+//    	    // New line
+//    	    System.out.println();
+//    	     
+//    	    // Delete an element from queue
+//    	    que.dequeue();
+//    	    System.out.print("Queue: ");
+//    	    que.display();
+//    	 
+//    	    // New line
+//    	    System.out.println();
+//    	    System.out.println("Size of stack is " +
+//    	                       stk.size());
+//    	    System.out.println("Size of queue is " +
+//    	                       que.size());
+    	
 	      //  naam();naam2();
 //		Queue<Integer>q=new LinkedList<Integer>();
 //		q.add(1);q.add(2);q.add(3);q.add(4);
 //		q.add(5);q.add(6);q.add(7);
 //		q.add(8);
 //		interleave(q);
+    	    
 	}
 //1
 	// Implement Stack
@@ -243,6 +308,55 @@ static class MyQueue {
     {
         if(sq.top2==sq.size) return -1;
         return sq.arr[sq.top2++];
+    }
+    //4
+    //Middle element find and delete in O(1) of stack
+    static class GFG {
+    static    class DLLNode {
+            DLLNode prev;
+            int data;
+            DLLNode next;
+            DLLNode(int d) { data = d; }
+        }
+      static  class myStack {
+            DLLNode head;
+            DLLNode mid;
+            int count;
+        }
+        myStack createMyStack()
+        {
+            myStack ms = new myStack();
+            ms.count = 0;
+            return ms;
+        }
+        void push(myStack ms, int new_data)
+        {
+            DLLNode new_DLLNode = new DLLNode(new_data);
+            new_DLLNode.prev = null;
+            new_DLLNode.next = ms.head;
+            ms.count += 1;
+            if (ms.count == 1) { ms.mid = new_DLLNode;}
+            else {ms.head.prev = new_DLLNode;
+                if ((ms.count % 2)!= 0)ms.mid = ms.mid.prev;
+            }
+            ms.head = new_DLLNode;
+        }
+        int pop(myStack ms)
+        {
+            if (ms.count == 0) {System.out.println("Stack is empty");return -1;}
+            DLLNode head = ms.head;
+            int item = head.data;
+            ms.head = head.next;
+            if (ms.head != null)ms.head.prev = null;
+            ms.count -= 1;
+            if (ms.count % 2 == 0)ms.mid = ms.mid.next;
+      return item;
+        }
+        int findMiddle(myStack ms)
+        {
+            if (ms.count == 0) {System.out.println("Stack is empty now");return -1;}
+            return ms.mid.data;
+        }
     }
     //5
     //Implement k stack in an array
@@ -409,7 +523,148 @@ static class MyQueue {
 	        	for(int i=0;i<n;i++){if(M[i][a]==1){c++;}if(M[a][i]==1){d++;}}
 	        	    return c==n-1&&d==0?a:-1;
 	        }
-	        //13
+	        //12
+	        //Evaluation of Postfix Expression
+	        public static int evaluatePostFix(String S)
+	        {
+	            Stack<Integer>a=new Stack<Integer>(); 
+	        char[]s=S.toCharArray();int n=s.length;
+	        for(int i=0;i<n;i++)
+	        {
+	        if(s[i]=='+'||s[i]=='-'||s[i]=='*'||s[i]=='/'){int x=a.pop(),y=a.pop();
+	            if(s[i]=='+'){a.push(y+x);}
+	                else  if(s[i]=='-'){a.push(y-x);}
+	                else if(s[i]=='*'){a.push(y*x);}
+	                else if(s[i]=='/'){a.push(y/x);}
+	            }    else{a.push((int)(s[i]-'0'));}
+	        }
+	    return a.pop();
+	        }
+	        //Evaluation of prefix Expression
+	        public static int evaluatePreFix(String S)
+	        {
+	            Stack<Integer>a=new Stack<Integer>(); 
+	        char[]s=S.toCharArray();int n=s.length;
+	        for(int i=n-1;i>=0;i--)
+	        {
+	        if(s[i]=='+'||s[i]=='-'||s[i]=='*'||s[i]=='/'){int x=a.pop(),y=a.pop();
+	            if(s[i]=='+'){a.push(x+y);}
+	                else  if(s[i]=='-'){a.push(x-y);}
+	                else if(s[i]=='*'){a.push(x*y);}
+	                else if(s[i]=='/'){a.push(x/y);}
+	            }    else{a.push((int)(s[i]-'0'));}
+	        }
+	    return a.pop();
+	        }
+	        //infix to postfix
+	        static int Prec(char ch)
+	        {	            switch (ch)   {
+	            case '+':
+	            case '-':
+	                return 1;
+	          
+	            case '*':
+	            case '/':
+	                return 2;
+	          
+	            case '^':
+	                return 3;
+	            }
+	            return -1;
+	        }
+	          static String infixToPostfix(String exp)
+	        {   String result = new String("");
+	            Stack<Character> stack = new Stack<>();
+	            for (int i = 0; i<exp.length(); ++i)
+	            {       char c = exp.charAt(i);
+	                if (Character.isLetterOrDigit(c))
+	                    result += c;
+	                else if (c == '(')
+	                    stack.push(c);
+	                else if (c == ')')
+	                {
+	                    while (!stack.isEmpty()&&stack.peek() != '(')result += stack.pop();
+	                        stack.pop();
+	                }
+	                else // an operator is encountered
+	                {
+	                    while (!stack.isEmpty() && Prec(c)<= Prec(stack.peek())){result += stack.pop();}
+	                    stack.push(c);
+	                }
+	          
+	            }
+	            while (!stack.isEmpty()){
+	                if(stack.peek() == '(')
+	                    return "Invalid Expression";
+	                result += stack.pop();
+	             }
+	            return result;
+	        }
+	          //infix to prefix
+	          static StringBuilder infixToPreFix(String expression){
+                  StringBuilder result = new StringBuilder();
+	              StringBuilder input = new StringBuilder(expression);
+	              input.reverse();
+	              Stack<Character> stack = new Stack<Character>();
+                 char [] charsExp = input.toString().toCharArray();
+	              for (int i = 0; i < charsExp.length; i++) {
+	                  if (charsExp[i] == '(') {charsExp[i] = ')';i++;}
+	                  else if (charsExp[i] == ')') {charsExp[i] = '(';i++;}
+	              }
+	              for (int i = 0; i <charsExp.length ; i++) {
+	                  char c = charsExp[i];
+                 if(Prec(c)>0){
+	                      while(stack.isEmpty()==false &&
+	                    		  ( (Prec(c)<Prec(stack.peek()))||(c=='^'&&Prec(c)<=Prec(stack.peek())))){
+	                          result.append(stack.pop());
+	                      }
+	                      stack.push(c);
+	                  }else if(c==')'){
+	                      char x = stack.pop();
+	                      while(x!='('){
+	                          result.append(x);
+	                          x = stack.pop();
+	                      }
+	                  }else if(c=='('){
+	                      stack.push(c);
+	                  }else{
+	                      //character is neither operator nor "("
+	                      result.append(c);
+	                  }
+	              }
+
+	              for (int i = 0; i <=stack.size() ; i++) {
+	                  result.append(stack.pop());
+	              }
+	              return result.reverse();
+	          }
+		        //postfix to infix
+	          static String getInfix(String exp)
+	          {Stack<String> s = new Stack<String>();
+	           for (int i = 0; i < exp.length(); i++)
+	              {char x=exp.charAt(i);
+	        	   if ((x >= 'a' && x <= 'z') ||(x >= 'A' && x <= 'Z'))
+	        	   {s.push(exp.charAt(i) + "");}
+	              else{	  String op1 =s.pop();
+	                      String op2 =s.pop();
+	                      s.push("(" + op2 + exp.charAt(i) +op1 + ")");
+	                  }
+	              }   return s.pop();
+	          }
+	          //prefix to infix
+	          static String getInfixs(String exp)
+	          {Stack<String> s = new Stack<String>();
+	           for (int i = exp.length()-1; i >=0; i--)
+	              {char x=exp.charAt(i);
+	        	   if ((x >= 'a' && x <= 'z') ||(x >= 'A' && x <= 'Z'))
+	        	   {s.push(exp.charAt(i) + "");}
+	              else{	  String op1 =s.pop();
+	                      String op2 =s.pop();
+	                      s.push("(" + op1 + exp.charAt(i) +op2 + ")");
+	                  }
+	              }   return s.pop();
+	          }
+	      	        //13
 	        // Insert  an element at bottom of stack w/o using other ds
 	        public static void insert2(int x) {
 	        	if(a.isEmpty()){a.push(x);}
@@ -433,6 +688,29 @@ static class MyQueue {
 	        	if(a.isEmpty()){a.push(x);}
 	        	else{int y=a.pop();insert(x);a.push(y);}
 	        }
+	        //15
+	        //sort stack using recurtion
+	        //O(N*N) O(N)
+	    	public Stack<Integer> sort(Stack<Integer> s)
+	    	{
+	    	if(!s.isEmpty()){
+	    	    int i=s.pop();
+	    	    sort(s);
+	    	    insert(i,s);
+	    	    
+	    	}
+	    	   return s;
+	    	}
+	    	public void insert(int i,Stack<Integer> s)
+	    	{
+	    	    if(s.isEmpty()||s.peek()<=i){s.push(i);}
+	    	    else{
+	    	        int t=s.pop();
+	    	        insert(i,s);
+	    	        s.push(t);
+	    	    }
+	    	    
+	    	}
 	        //16
 	        //Mege ovellaping Intervls
 	      
@@ -453,6 +731,122 @@ static class MyQueue {
 	    	
 	    	    return new int[]{max,point};
 	    	}
+	    	//17
+	    	//Largest Rectangle in Histogram
+	    	//O(NLOGN) Segment tree
+	    	public int largestRectangleArea2(int[] heights) {
+	            int n = heights.length;
+	            int[] segment = buildSegmentTree(heights);
+	            return divideConquer(heights, 0, n - 1, segment);        
+	        }
+	        
+	        private static int divideConquer(int[] height, int l, int h, int[] segment) {
+	            if(l <= h) {
+	                if(l == h) return height[l] * 1;
+	                int minIndex = query(segment, height, l, h);
+	                int currArea = height[minIndex] * (h - l + 1);
+	                int leftArea = divideConquer(height, l, minIndex - 1, segment);
+	                int rightArea = divideConquer(height, minIndex + 1, h, segment);
+	                return Math.max(Math.max(currArea, leftArea), rightArea);
+	            }
+	            return 0;
+	        }
+	        
+	        private static int[] buildSegmentTree(int[] heights) {
+	            int n = heights.length;
+	            int[] segment = new int[2 * n];
+	            for(int i = n - 1, j = 2 * n - 1; i >= 0; i--, j--) {
+	                segment[j] = i;
+	            }
+	            for(int i = n - 1; i > 0; i--) {
+	                if(heights[segment[2 * i]] < heights[segment[2 * i + 1]]) segment[i] = segment[2 * i];
+	                else segment[i] = segment[2 * i + 1];
+	            }
+	            return segment;
+	        }
+	        
+	        private static int query(int[] segment, int[] heights, int i, int j) {
+	            int n = heights.length;
+	            int p = i + n;
+	            int q = j + n;
+	            int min = Integer.MAX_VALUE;
+	            int index = -1;
+	            while(p <= q) {
+	                if(p % 2 == 1) {
+	                    if(heights[segment[p]] < min) {
+	                        min = heights[segment[p]];
+	                        index = segment[p];
+	                    }
+	                    p++;
+	                }
+	                if(q % 2 == 0) {
+	                    if(heights[segment[q]] < min) {
+	                        min = heights[segment[q]];
+	                        index = segment[q];
+	                    }
+	                    q--;
+	                }
+	                p = p >> 1;
+	                q = q >> 1;
+	            }
+	            return index;
+	        }
+	    
+	        //O(N) O(N)
+	    	public int largestRectangleArea(int[] hist) 
+	        {int n=hist.length;
+	      Stack<Integer>s= new Stack<Integer>();
+	      int i=0;int max=0;
+	       while (i < n) {
+	           if (s.isEmpty()||hist[s.peek()] <= hist[i]) {
+	           s.push(i++);}
+	           else {
+	               int tp=s.pop();
+	               int ans=hist[tp]*(s.isEmpty()?i:i-s.peek()-1);
+	           max=Math.max(ans,max);
+	           }
+	       }
+	      while(!s.isEmpty()){ int tp=s.pop();
+	               int ans=hist[tp]*(s.isEmpty()?i:i-s.peek()-1);
+	           max=Math.max(ans,max);}
+	       return max;
+	      }
+	    	//O(N) O(N) BUT  FASTER DUE TO PREPROCESSING
+	    	public static int largestRectangleArea3(int[] height) {
+	    	    if (height == null || height.length == 0) {
+	    	        return 0;
+	    	    }
+	    	    int[] lessFromLeft = new int[height.length]; // idx of the first bar the left that is lower than current
+	    	    int[] lessFromRight = new int[height.length]; // idx of the first bar the right that is lower than current
+	    	    lessFromRight[height.length - 1] = height.length;
+	    	    lessFromLeft[0] = -1;
+
+	    	    for (int i = 1; i < height.length; i++) {
+	    	        int p = i - 1;
+
+	    	        while (p >= 0 && height[p] >= height[i]) {
+	    	            p = lessFromLeft[p];
+	    	        }
+	    	        lessFromLeft[i] = p;
+	    	    }
+
+	    	    for (int i = height.length - 2; i >= 0; i--) {
+	    	        int p = i + 1;
+
+	    	        while (p < height.length && height[p] >= height[i]) {
+	    	            p = lessFromRight[p];
+	    	        }
+	    	        lessFromRight[i] = p;
+	    	    }
+
+	    	    int maxArea = 0;
+	    	    for (int i = 0; i < height.length; i++) {
+	    	        maxArea = Math.max(maxArea, height[i] * (lessFromRight[i] - lessFromLeft[i] - 1));
+	    	    }
+
+	    	    return maxArea;
+	    	}
+
 	        //18
 	        // Longest Valid Parentheses
 	        //O(N2) O(1)
@@ -519,6 +913,43 @@ static class MyQueue {
 	        }
 	        return max;
 	    }
+	        //19
+	        //Redunctant  braces
+	        //O(N) O(N)
+	        public int braces(String A) {
+	            char[] t= A.toCharArray();
+	            Stack<Character>s= new Stack<Character>();
+	            int n=t.length;
+	            for(int i=0;i<n;i++)
+	            {if(t[i]==')'){
+	                boolean red=true;
+	                while(s.peek()!='('){
+	                    if(s.peek()=='+'||s.peek()=='-'||s.peek()=='*'||s.peek()=='/'){red=false;}
+	                s.pop();
+	                }s.pop();
+	                if(red==true)return 1;
+	            }
+	            else{s.push(t[i]);}}
+	        return 0;
+	        }
+	        //2
+	        //Faster because we neet to check count only
+	        public int bracs(String A) {
+	            char[] t= A.toCharArray();
+	            Stack<Character>s= new Stack<Character>();
+	            int n=t.length;
+	            for(int i=0;i<n;i++)
+	            {if(t[i]==')'){
+	                int red=0;
+	                while(s.peek()!='('){
+	                   red++;
+	                s.pop();
+	                }s.pop();
+	                if(red<2)return 1;
+	            }
+	            else{s.push(t[i]);}}
+	        return 0;
+	        }
 	        //20
 	        //Implement stack using  queue 
 	        Queue<Integer>q=new LinkedList<Integer>();
@@ -537,6 +968,81 @@ static class MyQueue {
 	        public boolean empty() {
 	            return q.isEmpty()?true:false;
 	        }
+	        //21
+	     
+	        	static class DQueNode
+	  {
+	      int value;DQueNode next;DQueNode prev;
+	  DQueNode(int x){this.value=x;next=null;prev=null;}
+	  }
+	        
+	      	static class deque{private DQueNode head,tail;
+	        	  public deque(){ head = tail = null;}
+	        	  int size() { DQueNode temp = head;int len = 0;
+	        		  if (temp==null)return 0;
+	        	            while (temp != null)
+	        	            {len++;temp = temp.next;}
+	        	            return len;
+	        	    }
+	        	 void insert_first(int element)
+	        	 {DQueNode temp = new DQueNode(element);
+	        	 if (head == null)
+	        	        {
+	        	            head = tail = temp;
+	        	            temp.next = temp.prev = null;
+	        	        }
+	        	        else
+	        	        { temp.prev = null; temp.next = head; head.prev = temp; head = temp;}
+	        	    }
+	      	    void insert_last(int element)
+	        	    { DQueNode temp = new DQueNode(element);
+	        	        temp.value = element;
+	        	        if (head == null)
+	        	        {
+	        	            head = tail = temp;
+	        	            temp.next = temp.prev = null;
+	        	        }
+	        	        else
+	        	        { temp.next = null;temp.prev = tail; tail.next = temp;  tail = temp; }
+	        	    }
+	        	  void remove_first()
+	        	    {if(head==null)return;
+	        	    if(head==tail) {int ans=head.value;System.out.println(ans);head=null;tail=null;return;}
+	        	            DQueNode temp = head;
+	        	            head = head.next;
+	        	            head.prev = null;
+	        	        System.out.print(temp.value);
+	        	    }
+	        	 void remove_last()
+	        	    {if(tail==null)return;
+	        	    if(head==tail) {int ans=head.value;System.out.print(ans);head=null;tail=null;return;}
+    	            DQueNode temp = tail;
+	        	            tail = tail.prev;
+	        	            tail.next.prev=null;
+	        	            tail.next = null;
+	        	        System.out.print(temp.value);
+	        	    }
+	        	 void display() { DQueNode temp = head;
+       		  if (temp==null)System.out.print("Not There");
+       	            while (temp != null)
+       	            {System.out.print(temp.value+" ");temp = temp.next;}
+       	    }
+	      	}
+	        	 static class iStack
+	        	{deque d = new deque();
+	        	 public void push(int element){ d.insert_last(element);}
+	        	 public void pop(){d.remove_last();}
+	        	 public int size() { return d.size(); }
+	        	 public void display() {d.display();}
+	        	}
+	        	 
+	        	 static class iQueue
+	        	{deque d = new deque();
+	        	 public void enqueue(int element){d.insert_last(element);}
+	        	 public void dequeue(){d.remove_first();}
+	        	 public void display() { d.display(); }
+	        	 public int size() { return d.size();}
+	        	}
 	        //22
 	        // Stack Permutations (Check if an array is stack permutation of other)
 	        //O(n) O(n)
@@ -618,6 +1124,130 @@ static class MyQueue {
 	                free = i;return arr[i];
 	            }    
 	        }
+	 //26
+	 //LRU Cache
+// TLE
+	 static class LRUCache {
+		 static  Queue<Integer>q;
+		 static  HashMap<Integer,Integer>h;
+		 static  int capacity;
+		     LRUCache(int cap)
+		     {this.capacity=cap;q= new ArrayDeque<Integer>();h= new LinkedHashMap();}
+		     public static int get(int key)
+		     {     if(h.containsKey(key)){   q.remove(new Integer(key));q.add(key);}
+		     return !h.containsKey(key)?-1:h.get(key);
+		     }
+
+		     public static void put(int key, int value)
+		     {
+		         if(h.containsKey(key)){q.remove(new Integer(key));q.add(key);h.put(key,value);}
+		         else{
+		             if(q.size()<capacity){q.add(key);h.put(key,value);}
+		             else{
+		                  int k=q.remove();q.add(key);h.remove(k);h.put(key,value);}
+		         }
+		         //System.out.print("g"+h);
+		     }
+		 }
+	 //O(1) with HashLinked Map It already have feature of LRU
+	 class LRUCache3 {
+		    private LinkedHashMap<Integer, Integer> map;
+		    private final int CAPACITY;
+		    public LRUCache3(int capacity)
+		    {
+		        CAPACITY = capacity;
+		        map = new LinkedHashMap<Integer, Integer>(capacity, 0.75f, true) {
+		            protected boolean removeEldestEntry(Map.Entry eldest)
+		            {
+		                return size() > CAPACITY;
+		            }
+		        };
+		    }
+		    public int get(int key)
+		    {        return map.getOrDefault(key, -1);}
+		    public void set(int key, int value)
+		    {        map.put(key, value);}
+		}
+	 //O(1) Doubly LL
+static class Nod {
+    int key;
+    int value;
+    Nod pre;
+    Nod next;
+ 
+    public Nod(int key, int value)
+    {
+        this.key = key;
+        this.value = value;
+    }
+}
+ 
+static class LRUCache2 {
+    private static HashMap<Integer, Nod> map;
+    private static int capacity, count;
+    private static Nod head, tail;
+ 
+    public LRUCache2(int capacity)
+    {
+        this.capacity = capacity;
+        map = new HashMap<>();
+        head = new Nod(0, 0);
+        tail = new Nod(0, 0);
+        head.next = tail;
+        tail.pre = head;
+        head.pre = null;
+        tail.next = null;
+        count = 0;
+    }
+ 
+    public static void deleteNode(Nod node)
+    {
+        node.pre.next = node.next;
+        node.next.pre = node.pre;
+    }
+ 
+    public static void addToHead(Nod node)
+    {
+        node.next = head.next;
+        node.next.pre = node;
+        node.pre = head;
+        head.next = node;
+    }
+    public static int get(int key)
+    {
+        if (map.get(key) != null) {
+            Nod node = map.get(key);
+            int result = node.value;
+            deleteNode(node);
+            addToHead(node);
+       
+            return result;
+        }
+        return -1;
+    }
+    public static void set(int key, int value)
+    {
+        if (map.get(key) != null) {
+            Nod node = map.get(key);
+            node.value = value;
+            deleteNode(node);
+            addToHead(node);
+        }
+        else {
+            Nod node = new Nod(key, value);
+            map.put(key, node);
+            if (count < capacity) {
+                count++;
+                addToHead(node);
+            }
+            else {
+                map.remove(tail.pre.key);
+                deleteNode(tail.pre);
+                addToHead(node);
+            }
+        }
+    }
+}
 	        //27
 	        //Queue reversal
 	        public static void naam2() {
@@ -668,6 +1298,90 @@ static class MyQueue {
 	        	h--;}
 	        
 	        	while(!q.isEmpty()) {System.out.println(q.remove());}
+	        }
+	        //30
+	        //Circular Tour
+	        //O(n) O(1)
+	        public static int tour(int[]p,int []d){
+	        int start=0,n=p.length;
+	        for(int i=0;i<n;i++){if((p[i]-d[i])>=0){start=i;break;}}
+	        int i=start,curr=0;
+	        while(i<n)
+	        {
+	            curr+=(p[i]-d[i]);
+	           
+	            if(curr<0){i++;while(i<n){if((p[i]-d[i])>=0){start=i;curr=0;break;}i++;}}
+	            else{i++;}
+	        }
+	        if(curr<0)return -1;
+	        for(int j=0;j<start;j++){curr+=(p[j]-d[j]);if(curr<0){return -1;}}
+	        return start;
+	    }
+	        //31
+	        //Rotten Oranges
+	        //O(n^2) O(n^2)
+	        public int orangesRotting(int[][] grid)  {int n=grid.length,m=grid[0].length,ans=-88,jk=0;
+		    Queue<int[]>q=new LinkedList<int[]>();
+		    for(int i=0;i<n;i++)
+		    {
+		        for(int j=0;j<m;j++)
+		        {
+		            if(grid[i][j]==2){q.add(new int[]{i,j});}
+		            else if(grid[i][j]==1){jk++;}
+		        }
+		    }
+	                         if(q.isEmpty()){if(jk==0)return 0; else return -1;}                     
+		    //System.out.print(jk);
+		    q.add(new int[]{-1,0});
+
+		    while(!q.isEmpty())
+		    {
+		        int r=q.peek()[0],c=q.peek()[1];q.remove();
+		        if(q.size()==0){ans=c;return jk>0?-1:ans;}
+		        else{ 
+		            if(r==-1){c++;q.add(new int[]{r,c});}
+		            else{
+		    if(r-1>=0&&r-1<n&&c>=0&&c<m&&grid[r-1][c]==1){jk--;grid[r-1][c]=2;q.add(new int[]{r-1,c});}
+		    if(r+1>=0&&r+1<n&&c>=0&&c<m&&grid[r+1][c]==1){jk--;grid[r+1][c]=2;q.add(new int[]{r+1,c});}
+		    if(r>=0&&r<n&&c-1>=0&&c-1<m&&grid[r][c-1]==1){jk--;grid[r][c-1]=2;q.add(new int[]{r,c-1});}
+		    if(r>=0&&r<n&&c+1>=0&&c+1<m&&grid[r][c+1]==1){jk--;grid[r][c+1]=2;q.add(new int[]{r,c+1});}
+		            }
+		        }
+		    }
+
+		    return jk>0?-1:ans;
+		       }
+//32
+//Distance of nearest cell having 1 
+	        //O(n2) O(n2)
+	        public int[][] nearest(int[][] grid)
+	        {int n=grid.length,m=grid[0].length,ans=-88,jk=0;
+	        int[][] anss=new int[n][m];
+	    		    Queue<int[]>q=new LinkedList<int[]>();
+	    		    for(int i=0;i<n;i++)
+	    		    {
+	    		        for(int j=0;j<m;j++)
+	    		        {
+	    		            if(grid[i][j]==1){q.add(new int[]{i,j});}
+	    		            else if(grid[i][j]==0){anss[i][j]=-1;}
+	    		        }
+	    		    }
+	    	                         if(q.isEmpty())
+	    	                         {
+	    	                             for(int i=0;i<n;i++)
+	    	                             {Arrays.fill(anss[i],Integer.MAX_VALUE);}return anss;
+	    	                             
+	    	                         } 
+	    		    while(!q.isEmpty())
+	    		    {
+	    		        int r=q.peek()[0],c=q.peek()[1];q.remove();
+	    		    if(r-1>=0&&r-1<n&&c>=0&&c<m&&anss[r-1][c]==-1){anss[r-1][c]=anss[r][c]+1;q.add(new int[]{r-1,c});}
+	    		    if(r+1>=0&&r+1<n&&c>=0&&c<m&&anss[r+1][c]==-1){anss[r+1][c]=anss[r][c]+1;q.add(new int[]{r+1,c});}
+	    		    if(r>=0&&r<n&&c-1>=0&&c-1<m&&anss[r][c-1]==-1){anss[r][c-1]=anss[r][c]+1;q.add(new int[]{r,c-1});}
+	    		    if(r>=0&&r<n&&c+1>=0&&c+1<m&&anss[r][c+1]==-1){anss[r][c+1]=anss[r][c]+1;q.add(new int[]{r,c+1});}
+	    		    }
+
+	    		    return anss;
 	        }
 	        //33
 	        //First negative integer in every window of size k 
