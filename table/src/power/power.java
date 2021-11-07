@@ -1,104 +1,82 @@
 package power;
-
-import java.util.Scanner;
-
-import power.power.Node;
-
- class power{
-static class Node
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class power
 {
-    int data;
-    Node next;
-    Node(int x){this.next=null;this.data=x;}
-};
-   @SuppressWarnings("resource")
-public static void main (String[] args) 
+    public static void main(String[] args) throws IOException
     {
-        Scanner sc= new Scanner(System.in);
-        int t = sc.nextInt();
-        
-        while(t-- > 0)
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int T = Integer.parseInt(br.readLine().trim());
+        while(T-->0)
         {
-            int n = sc.nextInt();
-            Node head = new Node(sc.nextInt());
-            Node tail = head;
-            while(n-- > 1){
-		        tail.next = new Node(sc.nextInt());
-		        tail = tail.next;
-		    }
-		   
-		      new Solution();
-			head = Solution.mergeSort(head);
-		     printList(head);
-		    System.out.println();
-        }
-    }
-    public static void printList(Node head)
-    {
-        if(head == null)
-           return;
-           
-        Node temp = head;
-        while(temp != null)
-        {
-            System.out.print(temp.data + " ");
-            temp = temp.next;
-        }
+            int N = Integer.parseInt(br.readLine().trim());
+            String[] S1 = br.readLine().trim().split(" ");
+            String[] S2 = br.readLine().trim().split(" ");
+            int[] KnightPos = new int[2];
+            int[] TargetPos = new int[2];
+            for(int i = 0; i < 2; i++){
+                KnightPos[i] = Integer.parseInt(S1[i]);
+                TargetPos[i] = Integer.parseInt(S2[i]);
+            }
+            Solution obj = new Solution();
+            int ans = obj.minStepToReachTarget(KnightPos, TargetPos, N);
+            System.out.println(ans);
+       }
     }
 }
-
-
 // } Driver Code Ends
 
 
-//User function Template for Java
-/*
-class Node
-{
-    int data;
-    Node next;
-    Node(int key)
-    {
-        this.data = key;
-        next = null;
-    }
-} */
 
-  class Solution
+class Solution
 {
-    static Node mergeSort(Node a)
-    {if(a.next==null){return a;}
-    Node mid=getMid(a);
-    Node nextmid=mid.next;mid.next=null;
- //   System.out.print(a.data+" ");
-    Node x1=mergeSort(a);
-    Node x2=mergeSort(nextmid);
-    
-    Node r= merge(x1,x2);
-    return r;
-        
-    }
-    static Node merge(Node x,Node y)
-    {
-        // if(x==null)return y;
-        // if(y==null)return x;
-        Node temp= new Node(-1);Node t=temp;
-        while(x!=null&&y!=null)
-        {
-            if(x.data<=y.data)
-            {temp.next=x;x=x.next;}
-            else{temp.next=y;y=y.next;}
-        temp=temp.next;
-        }
-        while(x!=null){temp.next=x;x=x.next;temp=temp.next;}
-        while(y!=null){temp.next=y;y=y.next;temp=temp.next;}
-return t.next;
-    }
-    static Node getMid(Node h)
-    {
-        Node s=h,e=h;
-        while(e.next!=null&&e.next.next!=null)
-        {s=s.next;e=e.next.next;}
-        return s;
-    }
+	   public int minStepToReachTarget(int Ki[], int TPi[], int N)
+	    {
+	    	int K[]=new int[] {Ki[1],Ki[0]};
+	    	int TP[]=new int[] {TPi[1],TPi[0]};
+	        K[0]=N-K[0]+1;TP[0]=N-TP[0]+1;
+	 //       System.out.println(K[0]+" "+K[1]+"  "+TP[0]+" "+TP[1]);
+		int[][]dis=new int[N+1][N+1];
+				
+				for(int[] i:dis)
+				{Arrays.fill(i, Integer.MAX_VALUE);i[0]=-1;}
+				Arrays.fill(dis[0],-1);
+				Queue<int[]>q=new LinkedList<int[]>();
+				q.add(K);
+				dis[K[0]] [K[1]]=0;
+				while(!q.isEmpty()) 
+				{
+					int[] f=q.remove();
+					int x=f[0],y=f[1];
+		if(dis[TP[0]][TP[1]]!=Integer.MAX_VALUE)return dis[TP[0]][TP[1]];
+if(x-1>=1&&x-1<=N&&y+2>=1&&y+2<=N&&dis[x-1][y+2]==Integer.MAX_VALUE)
+{int xx[]=new int[] {x-1,y+2};q.add(xx);dis[x-1][y+2]=dis[x][y]+1;}
+
+if(x+1>=1&&x+1<=N&&y+2>=1&&y+2<=N&&dis[x+1][y+2]==Integer.MAX_VALUE)
+{int xx[]=new int[] {x+1,y+2};q.add(xx);dis[x+1][y+2]=dis[x][y]+1;}					
+
+if(x+2>=1&&x+2<=N&&y+1>=1&&y+1<=N&&dis[x+2][y+1]==Integer.MAX_VALUE)
+{int xx[]=new int[] {x+2,y+1};q.add(xx);dis[x+2][y+1]=dis[x][y]+1;}					
+
+if(x+2>=1&&x+2<=N&&y-1>=1&&y-1<=N&&dis[x+2][y-1]==Integer.MAX_VALUE)
+{int xx[]=new int[] {x+2,y-1};q.add(xx);dis[x+2][y-1]=dis[x][y]+1;}					
+
+if(x+1>=1&&x+1<=N&&y-2>=1&&y-2<=N&&dis[x+1][y-2]==Integer.MAX_VALUE)
+{int xx[]=new int[] {x+1,y-2};q.add(xx);dis[x+1][y-2]=dis[x][y]+1;}					
+
+if(x-1>=1&&x-1<=N&&y-2>=1&&y-2<=N&&dis[x-1][y-2]==Integer.MAX_VALUE)
+{int xx[]=new int[] {x-1,y-2};q.add(xx);dis[x-1][y-2]=dis[x][y]+1;}					
+
+if(x-2>=1&&x-2<=N&&y-1>=1&&y-1<=N&&dis[x-2][y-1]==Integer.MAX_VALUE)
+{int xx[]=new int[] {x-2,y-1};q.add(xx);dis[x-2][y-1]=dis[x][y]+1;}					
+
+if(x-2>=1&&x-2<=N&&y+1>=1&&y+1<=N&&dis[x-2][y+1]==Integer.MAX_VALUE)
+{int xx[]=new int[] {x-2,y+1};q.add(xx);dis[x-2][y+1]=dis[x][y]+1;}					
+
+		}
+		return dis[TP[0]][TP[1]];
+				
+			}		
+
 }
