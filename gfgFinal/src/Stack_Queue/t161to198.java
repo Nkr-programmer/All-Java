@@ -523,6 +523,128 @@ static class MyQueue {
 	        	for(int i=0;i<n;i++){if(M[i][a]==1){c++;}if(M[a][i]==1){d++;}}
 	        	    return c==n-1&&d==0?a:-1;
 	        }
+	        //11
+	        //INFIX evaluation
+	        //O(n) O(n)
+	        public int calculate(String expression) 
+	            {
+	                char[] tokens = expression.toCharArray();
+	                Stack<Integer> values = new Stack<Integer>();
+	                Stack<Character> ops = new Stack<Character>();
+	         
+	                for (int i = 0; i < tokens.length; i++)
+	                {
+	                    if (tokens[i] == ' ')  continue;
+	                    if (tokens[i] >= '0' && tokens[i] <= '9')
+	                    {
+	                        StringBuffer sbuf = new StringBuffer();
+	                        while (i < tokens.length && tokens[i] >= '0' && tokens[i] <= '9')
+	                        sbuf.append(tokens[i++]);
+	                        values.push(Integer.parseInt(sbuf.toString()));
+	                        i--;
+	                    }
+	                    else if (tokens[i] == '(')ops.push(tokens[i]);
+	                    else if (tokens[i] == ')')
+	                    {
+	                        while (ops.peek() != '(')
+	                        values.push(applyOp(ops.pop(), values.pop(), values.pop()));
+	                        ops.pop();
+	                    }
+	                    else if (tokens[i] == '+' ||tokens[i] == '-' ||tokens[i] == '*' ||tokens[i] == '/')
+	                    {
+	                        while (!ops.empty() &&hasPrecedence(tokens[i],ops.peek()))
+	                        values.push(applyOp(ops.pop(),values.pop(),values.pop()));
+	                        ops.push(tokens[i]);
+	                    }
+	                }
+	                while (!ops.empty()) values.push(applyOp(ops.pop(), values.pop(), values.pop()));
+	                return values.pop();
+	            }
+	            public boolean hasPrecedence(char op1, char op2)
+	            {
+	                if (op2 == '(' || op2 == ')')  return false;
+	                if ((op1 == '*' || op1 == '/') && (op2 == '+' || op2 == '-')) return false;
+	                else return true;
+	            }
+	            public int applyOp(char op,int b, int a)
+	            {
+	                switch (op)
+	                {case '+':return a + b;
+	                 case '-':return a - b;
+	                 case '*':return a * b;
+	                case '/':if (b == 0)return 0;
+	                    return a / b;
+	                }
+	                return 0;
+	            }
+	            //O(n) O(n)
+	            public int calculates(String s) {
+	            	    int len;
+	            	    if(s==null || (len = s.length())==0) return 0;
+	            	    Stack<Integer> stack = new Stack<Integer>();
+	            	    int num = 0;
+	            	    char sign = '+';
+	            	    for(int i=0;i<len;i++){
+	            	        if(Character.isDigit(s.charAt(i))){
+	            	            num = num*10+s.charAt(i)-'0';
+	            	        }
+	            	        if((!Character.isDigit(s.charAt(i)) &&' '!=s.charAt(i)) || i==len-1){
+	            	            if(sign=='-'){
+	            	                stack.push(-num);
+	            	            }
+	            	            if(sign=='+'){
+	            	                stack.push(num);
+	            	            }
+	            	            if(sign=='*'){
+	            	                stack.push(stack.pop()*num);
+	            	            }
+	            	            if(sign=='/'){
+	            	                stack.push(stack.pop()/num);
+	            	            }
+	            	            sign = s.charAt(i);
+	            	            num = 0;
+	            	        }
+	            	    }
+
+	            	    int re = 0;
+	            	    for(int i:stack){
+	            	        re += i;
+	            	    }
+	            	    return re;
+	            	}
+	           // O(n)  O(1)
+	            public int calculated(String s) {
+	                int sum = 0;
+	                int tempSum = 0;
+	                int num = 0;
+	                char lastSign = '+';
+	                for (int i = 0; i < s.length(); i++) {
+	                    char c = s.charAt(i);
+	                    if (Character.isDigit(c)) num = num * 10 + c - '0';
+	                    if (i == s.length() - 1 || !Character.isDigit(c) && c!=' ') {
+	                        switch(lastSign) {
+	                            case '+':
+	                                sum+=tempSum;
+	                                tempSum = num;
+	                                break;
+	                            case '-':
+	                                sum+=tempSum;
+	                                tempSum = -num;
+	                                break;
+	                            case '*':
+	                                tempSum *= num;
+	                                break;
+	                            case '/':
+	                                tempSum /= num;
+	                                break;
+	                        }
+	                        lastSign = c;
+	                        num=0;
+	                    }
+	                }
+	                sum+=tempSum;
+	                return sum;
+	            }
 	        //12
 	        //Evaluation of Postfix Expression
 	        public static int evaluatePostFix(String S)

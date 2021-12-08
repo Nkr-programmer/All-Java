@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="dijkastra"/>
+		<item key="selection" value=" 11"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="true"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value=" 11"/>
+			<item value=" 1"/>
+			<item value=" "/>
+			<item value="11"/>
 			<item value="dijkastra"/>
 			<item value="topological"/>
 			<item value="topo"/>
@@ -19,10 +23,6 @@
 			<item value="rectangle"/>
 			<item value="his"/>
 			<item value="ram"/>
-			<item value="gram"/>
-			<item value="h"/>
-			<item value="ho"/>
-			<item value="hor"/>
 		</list>
 		<list key="replacehistory">
 			<item value="int"/>

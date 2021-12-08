@@ -69,6 +69,7 @@ public static void main(String[] args) {
 		       		return dp[n];    
 		       		        }
 		    //2
+		        //0 - 1 Knapsack Problem 
 		        //recurtion
 		        static int knapSack(int W, int wt[], int val[], int n)
 		        {
@@ -112,6 +113,7 @@ public static void main(String[] args) {
 		          return K[n][W];      
 		    }
 		        //3
+		      //nCr
 		        //recurtion
 		        static int nCr(int n, int r)
 		        {return ncrs(n,r);}
@@ -180,6 +182,7 @@ public static void main(String[] args) {
         	return dp[n][r];
         }
         //5
+        //nth catalan
         //recursive
         public static int findCatalan(int n)
         {           return find(n);}
@@ -246,6 +249,7 @@ public static void main(String[] args) {
       return d;
       }
      //6
+     //Matrix chain multiplication
      //recursive
      static int matrixMultiplication(int N, int arr[])
      {return m(arr,1,N-1);    }
@@ -283,6 +287,7 @@ public static void main(String[] args) {
      }
        	 return dp[1][n-1]; }
      //7
+     //Edit Distance
      //recursive
      public int editDistance(String s, String t) {
     	   return edit(s,t,s.length(),t.length());
@@ -386,6 +391,7 @@ public static void main(String[] args) {
 	    return dp[n][sum];
 	    }
 //9
+	    //Friends Pairing Problem
 	    //recurtion
 	    public long countFriendsPairings(int n) 
 	    {return count(n);   }
